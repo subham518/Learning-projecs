@@ -1,0 +1,39 @@
+<%- include("../partials/header") %>
+<div class="flex flex-col items-center min-h-screen bg-white py-10">
+  <div class="bg-yellow-50 rounded-xl shadow-lg p-8 w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-3 text-yellow-800 text-center">Arithmetic Calculator</h2>
+    <p class="text-gray-700 mb-5 text-center">
+      <span class="font-semibold text-yellow-700">Arithmetic operations</span> (+, −, ×, ÷) are the foundation of all mathematics. Use this to add, subtract, multiply, or divide two numbers!
+    </p>
+    <form id="arithmeticForm" class="flex flex-col gap-4">
+      <input type="number" id="arithNum1" placeholder="Number 1" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"/>
+      <input type="number" id="arithNum2" placeholder="Number 2" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"/>
+      <select id="arithOp" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        <option value="+">Addition (+)</option>
+        <option value="-">Subtraction (−)</option>
+        <option value="*">Multiplication (×)</option>
+        <option value="/">Division (÷)</option>
+      </select>
+      <button type="submit" class="bg-yellow-600 hover:bg-yellow-700 transition text-white font-bold py-2 px-4 rounded mt-2">
+        Calculate
+      </button>
+    </form>
+    <div id="arithmeticResult" class="mt-6 text-xl text-green-700 text-center"></div>
+    <div class="mt-6">
+      <div class="bg-yellow-100 border-l-4 border-yellow-600 p-3 rounded">
+        <span class="font-medium text-yellow-800">Tip:</span>
+        <span class="text-gray-800">Arithmetic is the basis for algebra, geometry, and beyond!</span>
+      </div>
+      <div class="mt-3 flex flex-col gap-2">
+        <span class="bg-green-200 text-green-900 px-3 py-1 rounded text-xs font-medium shadow">Example: 4 × 5 = 20</span>
+        <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded text-xs font-medium shadow">Example: 12 ÷ 3 = 4</span>
+      </div>
+    </div>
+    <div class="mt-4 text-gray-500 text-xs text-center italic">
+      Use these operations as the stepping stones to solving bigger math problems!
+    </div>
+  </div>
+</div>
+<script src="/public/js/script.js"></script>
+<%- include("../partials/footer") %>
+

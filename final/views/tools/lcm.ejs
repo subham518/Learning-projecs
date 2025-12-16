@@ -1,0 +1,35 @@
+<%- include("../partials/header") %>
+
+<div class="flex flex-col items-center min-h-screen bg-white py-10">
+  <div class="bg-purple-50 rounded-xl shadow-lg p-8 w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-3 text-purple-800 text-center">LCM Calculator</h2>
+    <p class="text-gray-700 mb-5 text-center">
+      The <span class="font-semibold text-purple-800">Least Common Multiple (LCM)</span> of two numbers is the smallest
+      positive number that is divisible by both.
+    </p>
+
+    <form id="lcmForm" class="flex flex-col gap-4">
+      <input type="number" id="lcmNum1" placeholder="First number" required
+             class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-purple-400" />
+      <input type="number" id="lcmNum2" placeholder="Second number" required
+             class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-purple-400" />
+
+      <button type="submit"
+              class="bg-purple-600 hover:bg-purple-700 transition text-white font-bold py-2 px-4 rounded mt-2">
+        Find LCM
+      </button>
+    </form>
+
+    <div id="lcmResult" class="mt-6 text-xl text-green-700 text-center"></div>
+
+    <!-- Explanation box -->
+    <div id="lcmExplanation" class="mt-6 hidden">
+      <div class="bg-purple-100 border-l-4 border-purple-600 p-3 rounded">
+        <span class="font-medium text-purple-800 block mb-1">How was this LCM found?</span>
+        <p class="text-gray-800 text-sm" id="lcmExplanationText"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/footer") %>
